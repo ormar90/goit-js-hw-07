@@ -13,11 +13,16 @@ galleryEl.insertAdjacentHTML('afterbegin', makeGalleryItemMarkup);
 const simpleLightboxGallery = new SimpleLightbox('.gallery a', {
     caption: true,
     captionsData: 'alt',
-    captionsDelay: 250,
+    captionDelay: 250,
     captionClass: 'caption',
 });
 
-// console.log(simpleLightboxGallery);
+simpleLightboxGallery.on('shown.simplelightbox', function () {
+    const el = document.querySelector('.caption');
+    el.style.textAlign = 'center';
+    console.log(el);
+});
+
 
 
 
