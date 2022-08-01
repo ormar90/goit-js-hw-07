@@ -16,13 +16,3 @@ const simpleLightboxGallery = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
     captionClass: 'caption',
 });
-
-simpleLightboxGallery.on('shown.simplelightbox', function () {
-    const el = document.querySelector('.caption');
-    el.style.textAlign = 'center';
-    console.log(el);
-});
-
-
-
-
